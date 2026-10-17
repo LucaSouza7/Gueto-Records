@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUETO Records</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">GUETO RECORDS</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li><a href="lancamentos.html">Lançamentos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>O NOVO SOM DAS RUAS</h1>
+                <p>Trap, Rap e a cultura em sua forma mais pura.</p>
+                <a href="#artistas" class="btn">Conheça a Tropa</a>
+            </div>
+        </section>
+
+        <section id="artistas" class="section-container">
+            <h2 class="section-title">CASTING</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="Imagens/Show Bk.webp" alt="Artista 1">
+                    <div class="card-info">
+                        <h3>BK</h3>
+                        <p>Trap / Boombap</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Imagens/djonga show.jpeg" alt="Artista 2">
+                    <div class="card-info">
+                        <h3>Djonga</h3>
+                        <p>Trap / Boombap </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Imagens/filipe ret show.jpg" alt="Artista 3">
+                    <div class="card-info">
+                        <h3>Filipe Ret</h3>
+                        <p>Trap / Boom Bap</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GUETO Records. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="custom-player">
+        <div class="player-track-info"><img src="Imagens/Show Bk.webp" alt="Capa do Single" width="100" height="85">
+            
+            <div class="track-details">
+                <h4 id="track-name">Bk Universo </h4>
+                <p id="track-artist">Bk</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <audio id="audio-track" src="Musicas/BK - Universo.mp3"></audio>
+
+            <button id="play-btn" class="play-btn">▶</button>
+            <input type="range" id="progress-bar" value="0" max="100">
+        </div>
+    </div>
+    <script src="teste.js"></script>
+</body>
+</html>

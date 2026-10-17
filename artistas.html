@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas | GUETO Records</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">GUETO Records</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="artistas.html" class="active">Artistas</a></li>
+                <li><a href="lancamentos.html">Lançamentos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="section-container" style="margin-top: 100px;">
+        <h2 class="section-title">NOSSO TIME</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 40px;">A nova geração do trap nacional está aqui.</p>
+
+        <div class="grid">
+            <div class="card">
+                <img src="Imagens/Show Bk.webp" alt="Bk">
+                <div class="card-info">
+                    <h3>BK</h3>
+                    <p>O brabo do love song e barras pesadas.</p>
+                    <div class="social-icons">
+                        <small>Instagram | Spotify</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Imagens/djonga show.jpeg" alt="DJONGA">
+                <div class="card-info">
+                    <h3>Djonga</h3>
+                    <p>Diretamente de BH. Aquela composição e letras pesadissimas.</p>
+                    <div class="social-icons">
+                        <small>Instagram | Spotify</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Imagens/filipe ret show.jpg" alt="FILIPE RET">
+                <div class="card-info">
+                    <h3>Filipe Ret</h3>
+                    <p>Diretamente do Catete. Resgatando a essência do Boom Bap.</p>
+                    <div class="social-icons">
+                        <small>Instagram | Spotify</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/id/445/500/500?grayscale" alt="Drippy G">
+                <div class="card-info">
+                    <h3>Drippy G</h3>
+                    <p>Referência em estética e Trap de luxo.</p>
+                    <div class="social-icons">
+                        <small>Instagram | Spotify</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="custom-player">
+        <div class="player-track-info">
+            <img src="Imagens/Show Bk.webp" alt="Capa do Single" width="100" height="85">
+            <div class="track-details">
+                <h4 id="track-name">Bk Universo</h4>
+                <p id="track-artist">BK</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <audio id="audio-track" src="Musicas/BK - Universo.mp3"></audio>
+            <button id="play-btn" class="play-btn">▶</button>
+            <input type="range" id="progress-bar" value="0" max="100">
+        </div>
+    </div>
+
+    <script src="teste.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+/* --- Reset e Variáveis --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #f4f4f4;
+    --accent-color: #8a2be2; /* Um roxo neon bem sutil para dar o tom do Trap */
+    --font-main: 'Inter', sans-serif;
+    --font-title: 'Syncopate', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Navegação --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 10, 10, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links .active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* --- Hero Section (Capa) --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(10,10,10,0.3), var(--bg-color)), url('https://picsum.photos/id/1078/1920/1080?grayscale') center/cover;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* --- Seções e Grids (Artistas) --- */
+.section-container {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #222;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #050505;
+    border-top: 1px solid #222;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* --- Player de Música Fixo --- */
+.custom-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0f0f0f;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 2000;
+}
+
+.player-track-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 30%;
+}
+
+.player-track-info img {
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.track-details h4 {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.track-details p {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.play-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.play-btn:hover {
+    color: var(--accent-color);
+}
+
+/* Estilizando a barra de progresso */
+#progress-bar {
+    width: 100%;
+    max-width: 400px;
+    accent-color: var(--accent-color); /* Deixa a barra na cor roxa neon da marca */
+    cursor: pointer;
+}
+
+/* Ajuste para páginas internas não começarem debaixo da navbar */
+main {
+    min-height: calc(100vh - 150px); /* Garante que o rodapé não suba demais */
+    padding-bottom: 120px; /* Espaço para o player não cobrir o conteúdo */
+}
+
+.social-icons {
+    margin-top: 10px;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilo para as capas de lançamentos */
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.play-release {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--font-title);
+    font-size: 0.7rem;
+    cursor: pointer;
+    opacity: 0; /* Invisível por padrão */
+    transition: opacity 0.3s ease;
+    border-radius: 2px;
+}
+
+.release-card:hover .play-release {
+    opacity: 1; /* Aparece no hover */
+}
+
+.release-card:hover img {
+    filter: brightness(0.4) grayscale(1);
+    transform: scale(1.05);
+}
+
+.release-card img {
+    transition: all 0.5s ease;
+}
+
+/* ============================================================
+   PLAYER DE MÚSICA - VERSÃO COMPACTA
+   ============================================================ */
+
+   /* --- Player de Música Fixo (Versão Compacta) --- */
+.custom-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d; /* Um tom levemente mais escuro */
+    border-top: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5%; /* Padding vertical reduzido de 15px para 8px */
+    z-index: 2000;
+    height: 70px; /* Altura fixa menor para não ocupar muito espaço na tela */
+}
+
+.player-track-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 30%;
+}
+
+/* Diminuindo a capa do álbum de 60px para 45px */
+.player-track-info img {
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.track-details h4 {
+    font-family: var(--font-title);
+    font-size: 0.75rem; /* Fonte menor */
+    margin-bottom: 0px;
+    letter-spacing: 0.5px;
+}
+
+.track-details p {
+    font-size: 0.65rem; /* Fonte menor */
+    color: #666;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 60%; /* Dando mais espaço para a barra de progresso */
+}
+
+/* Diminuindo o botão de Play */
+.play-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.1rem; /* De 1.5rem para 1.1rem */
+    cursor: pointer;
+    min-width: 30px;
+}
+
+/* Deixando a barra de progresso mais fina */
+#progress-bar {
+    width: 100%;
+    height: 3px; /* Barra bem fininha e discreta */
+    accent-color: var(--accent-color);
+    cursor: pointer;
+    background: #333;
+}
