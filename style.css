@@ -358,3 +358,56 @@ main {
     cursor: pointer;
     background: #333;
 }
+
+
+/* Configurações gerais para telas menores */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Adaptação para celulares */
+@media screen and (max-width: 768px) {
+
+    /* Faz o conteúdo ocupar a largura disponível */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    /* Ajusta os títulos */
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    /* Organiza os elementos em coluna */
+    .content {
+        flex-direction: column;
+    }
+
+    /* Faz os cards ocuparem a largura disponível */
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Ajusta o menu */
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
